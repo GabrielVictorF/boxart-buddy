@@ -30,8 +30,8 @@ if [[ $OSTYPE == linux* ]]; then
     sed -i 's/^; extension = imagick/extension=imagick/' /etc/php/conf.d/imagick.ini
     sed -i 's/^;extension=imagick/extension=imagick/' /etc/php/conf.d/imagick.ini
 
-  elif [[ "$ID" == @(rhel|centos|fedora|almalinux|rocky) ]]; then
-
+  # elif [[ "$ID" == @(rhel|centos|fedora|almalinux|rocky) ]]; then
+  elif [[ "$ID" == "rhel" || "$ID" == "centos" || "$ID" == "fedora" || "$ID" == "almalinux" || "$ID" == "rocky" ]]; then
     sudo dnf update
 
     MACHINE=$(uname -m)
